@@ -1,0 +1,44 @@
+@import"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css";html{width:100%;height:100%}body{width:100%;height:100%;font-family:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif !important;color:#e7e7e7;background-color:#151515}body p,body a{font-family:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif !important;color:#e7e7e7;text-decoration:none;font-size:16px;line-height:24px;font-weight:400}h1,h2,h3,h4,h5,h6,div{font-family:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif !important;color:#e7e7e7;font-size:16px;line-height:24px;font-weight:400}.ellipsis{height:34px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle}.site{min-height:100vh;display:flex;flex-direction:column}.site-content{flex:1}.container{width:1380px;margin:0 auto}.center{text-align:center}.left{text-align:left}.right{text-align:right}.f_b_c{display:flex;align-items:center;justify-content:space-between}.a_center{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%)}button{width:100%;padding:16px;border-radius:12px;border:none;box-shadow:0px 5px 20px rgba(252,85,15,.63);cursor:pointer}button.orange{color:#fff;background:#fc550f}button.white{color:#fc550f;background:#fff}img{width:100%;height:100%}#back-to-top{position:fixed;width:70px;height:70px;background-color:#fff;display:inline-block;border-radius:50%;right:4%;bottom:50px;z-index:99;cursor:pointer;opacity:0}#back-to-top.visible{opacity:1}-50%);
+}
+
+/*링크 버튼의 스타일*/
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 5px 20px rgba(252, 85, 15, 0.63);
+  cursor: pointer;
+}
+button.orange {
+  color: #ffffff;
+  background: #fc550f;
+}
+button.white {
+  color: #fc550f;
+  background: #ffffff;
+}
+
+/*이미지*/
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/*기타*/
+#back-to-top {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff;
+  display: inline-block;
+  border-radius: 50%;
+  right: 4%;
+  bottom: 50px;
+  z-index: 99;
+  cursor: pointer;
+  opacity: 0;
+}
+#back-to-top.visible {
+  opacity: 1;
+}

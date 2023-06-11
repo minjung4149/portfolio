@@ -1,0 +1,109 @@
+@import "./mixin", "./var.scss";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* 타이포그래피 Typography */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: $font;
+  color: $font-basic;
+  background-color: $bg-black;
+  p,
+  a {
+    font-family: $font;
+    color: $font-basic;
+    text-decoration: none;
+    @include font-variable();
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+  font-family: $font;
+  color: $font-basic;
+  @include font-variable();
+}
+.ellipsis {
+  @include ellipsis;
+}
+
+/*레이아웃*/
+.site {
+  min-height: 100vh;
+  @include flex-column;
+  /* [footer 하단고정] body에 추가 */
+}
+.site-content {
+  flex: 1;
+  /* [footer 하단고정] main에 추가 */
+}
+.container {
+  width: 1380px;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.f_b_c {
+  @include flex-center-between;
+}
+.a_center {
+  @include absolute-center;
+}
+
+/*링크 버튼의 스타일*/
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 5px 20px rgba(252, 85, 15, 0.63);
+  cursor: pointer;
+  &.orange {
+    color: $font-white;
+    background: $bg-orange;
+  }
+  &.white {
+    color: $font-orange;
+    background: $bg-white;
+  }
+}
+
+/*이미지*/
+img {
+  @include width-100;
+}
+
+/*기타*/
+#back-to-top {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  background-color: $bg-white;
+  display: inline-block;
+  border-radius: 50%;
+  right: 4%;
+  bottom: 50px;
+  z-index: 99;
+  cursor: pointer;
+  opacity: 0;
+  &.visible {
+    opacity: 1;
+  }
+}

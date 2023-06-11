@@ -1,0 +1,97 @@
+//레이아웃
+@mixin width-100 {
+  width: 100%;
+  height: 100%;
+}
+@mixin flex-j-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-a-start {
+  display: flex;
+  align-items:baseline;
+}
+@mixin flex-a-center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-j-a-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-j-between {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin absolute-x-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin absolute-y-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin absolute-all {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+@mixin top-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+@mixin ellipsis {
+  height: 34px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+//폰트 사이즈, 높이 관련
+@function _line-height($font-size) {
+  @return ceil(($font-size * 1.3) / 8) * 8;
+}
+
+@mixin font-variable($font-size: 16px, $font-weight: 400) {
+  font-size: $font-size;
+  line-height: _line-height($font-size);
+  font-weight: $font-weight;
+}
