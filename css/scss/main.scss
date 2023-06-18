@@ -189,6 +189,21 @@ section {
             margin-bottom: 28px;
             strong {
               @include font-variable($font-xxl + 20, $extra-bold);
+              &.gradient{
+            
+                color: transparent;
+                background: radial-gradient(circle,  #ffeead 0%, #88d8b0 100%);
+                background-size: 200%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                animation: gradient_txt 4s linear infinite;
+              }
+         
+            }
+            @keyframes gradient_txt {
+              to {
+                  background-position: 200% center;
+              }
             }
           }
           .gradient_line {
@@ -235,6 +250,9 @@ section {
           }
           .point {
             padding: 40px 0;
+            p:first-child{
+              margin-bottom: 16px;
+            }
           }
         }
       }
