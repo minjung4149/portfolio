@@ -1,5 +1,13 @@
 $(function () {
-    //역량 아코디언 효과
+  accordionToggle();
+  backToTop();
+  lottieAni(); 
+  mobileMenu()
+  menuClick();
+  });
+
+  //역량 아코디언 효과
+  function accordionToggle(){
     let ability_tt = $("#ability_basic .tt_line");
     ability_tt.click(function () {
       $(this).parent().toggleClass("on");
@@ -21,8 +29,28 @@ $(function () {
         $(this).next().slideUp();
       }
     });
+  }
+
+  //최상단이동 버튼
+  function backToTop(){
+    let $window = $(window);
+    $window.scroll(function () {
+      if ($(this).scrollTop() > 500) {
+        $("#back-to-top").addClass("visible");
+      } else {
+        $("#back-to-top").removeClass("visible");
+      }
+    });
   
-    //로티 에니메이션
+    $("#back-to-top").click(function (e) {
+      e.preventDefault();
+  
+      $("html, body").animate({ scrollTop: 0 }, 700);
+    });
+  }
+
+ //로티 에니메이션
+  function lottieAni() {
     var lottieAni = bodymovin.loadAnimation({
       container: document.getElementById("lottie-pop"), // 필수, 애니메이션 들어가는 곳
       // path: "https://dev.anthonyfessy.com/check.json",
@@ -501,25 +529,36 @@ $(function () {
         assets: [],
       },
     });
-  
-    //BackToTop
-    let $window = $(window);
-    $window.scroll(function () {
-      if ($(this).scrollTop() > 500) {
-        console.log("d");
-        $("#back-to-top").addClass("visible");
-      } else {
-        $("#back-to-top").removeClass("visible");
+  }
+
+  //메뉴 클릭이벤트
+  function menuClick(){
+    let topMenu = $('nav ul li');
+    topMenu.click(function(){
+
+      switch(this.innerHTML){
+        case "About":
+        $('html').animate({scrollTop :0}, 500);
+        break;
+        case "Skill":
+          $('html').animate({scrollTop : $('#skill').offset().top}, 500);
+          break;
+        case "Work":
+          $('html').animate({scrollTop : $('#work').offset().top - 75 }, 500);
+          break;
+        case "Contact":
+          $('html').animate({scrollTop : $('#contact').offset().top}, 500);
+          break;
       }
+  
+      topMenu.removeClass("on");
+      $(this).addClass("on");
+    
     });
-  
-    $("#back-to-top").click(function (e) {
-      e.preventDefault();
-  
-      $("html, body").animate({ scrollTop: 0 }, 700);
-    });
-  
-    //햄버거 메뉴
+  }
+
+  //햄버거 메뉴
+  function mobileMenu(){
     let mobile_menuBtn = $(".mobile_menu");
     mobile_menuBtn.click(function () {
       if ($(".effect").hasClass("on")) {
@@ -538,5 +577,4 @@ $(function () {
         $(".mobile_nav").slideUp();
       }, 200);
     });
-  });
-  
+  }

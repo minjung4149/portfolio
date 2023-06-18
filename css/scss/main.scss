@@ -9,7 +9,9 @@ header {
     padding: 16px 80px;
     @include flex-center-between;
     h2 {
+     a{
       @include font-variable($font-xxl, $bold);
+     }
     }
     //메뉴
     .gnb_bar {
