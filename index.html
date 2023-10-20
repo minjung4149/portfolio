@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex">
+  <meta name="keywords" content="portfolio,웹퍼블리셔,포트폴리오,웹퍼블리싱,웹표준,웹접근성,html,css,javascript,jquery">
+  <meta name="description" content="4년 차 웹퍼블리셔 서민정 포트폴리오 사이트입니다.">
   <title>서민정 &#124; 포트폴리오</title>
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!-- Lottie -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
-
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css" />
@@ -18,6 +20,13 @@
   <script defer src="js/main.js"></script>
   <!-- favicon -->
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="일 잘하는 웹퍼블리셔 서민정">
+  <meta property="og:url" content="http://kirakira4149.dothome.co.kr/seo">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://kirakira4149.dothome.co.kr/seo/opengraph.jpg">
+  <meta property="og:title" content="일 잘하는 웹퍼블리셔 서민정">
+  <meta property="og:description" content="4년 차 웹퍼블리셔 서민정 포트폴리오 사이트입니다.">
 </head>
 
 <body>
@@ -33,7 +42,8 @@
             <li>Contact</li>
           </ul>
         </nav>
-        <button class="orange">이력서 내려받기</button>
+        <button class="orange" onclick="window.open('http://kirakira4149.dothome.co.kr/resume_minjung.pdf')">이력서
+          바로가기</button>
       </div>
 
       <div class="mobile_menu">
@@ -51,15 +61,14 @@
           <li><a href="#contact">contact</a></li>
         </ul>
         <div class="btn_area">
-          <button class="orange">이력서 내려받기</button>
+          <button class="orange" onclick="window.open('http://kirakira4149.dothome.co.kr/resume_minjung.pdf')">이력서
+            바로가기</button>
         </div>
       </div>
     </div>
   </header>
   <main>
     <section id="introduce">
-
-
       <div class="main_wrapper">
         <div class="about_me">
           <div class="wrapper">
@@ -959,16 +968,15 @@
     <section id="contact">
       <div class="container">
         <div class="contact_img">
-          <img src="img/contact.png" alt="이력서 내려받기, 깃허브 바로가기" />
+          <img src="img/contact.png" alt="이력서 바로가기, 깃허브 바로가기" />
         </div>
         <h3>
           thank you for <br />
           watching :&#41;
         </h3>
         <div class="btn_area">
-          <a href="#" download>
-            <button class="orange">이력서 내려받기</button>
-          </a>
+          <button class="orange" onclick="window.open('http://kirakira4149.dothome.co.kr/resume_minjung.pdf')">이력서
+            바로가기</button>
           <button class="white" onclick="window.open('https://github.com/minjung4149')">
             깃허브 바로가기
           </button>
