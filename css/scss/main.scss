@@ -9,9 +9,9 @@ header {
     padding: 16px 80px;
     @include flex-center-between;
     h2 {
-     a{
-      @include font-variable($font-xxl, $bold);
-     }
+      a {
+        @include font-variable($font-xxl, $bold);
+      }
     }
     //메뉴
     .gnb_bar {
@@ -191,20 +191,18 @@ section {
             margin-bottom: 28px;
             strong {
               @include font-variable($font-xxl + 20, $extra-bold);
-              &.gradient{
-            
+              &.gradient {
                 color: transparent;
-                background: radial-gradient(circle,  #ffeead 0%, #88d8b0 100%);
+                background: radial-gradient(circle, #ffeead 0%, #88d8b0 100%);
                 background-size: 200%;
                 background-clip: text;
                 -webkit-background-clip: text;
                 animation: gradient_txt 4s linear infinite;
               }
-         
             }
             @keyframes gradient_txt {
               to {
-                  background-position: 200% center;
+                background-position: 200% center;
               }
             }
           }
@@ -252,7 +250,7 @@ section {
           }
           .point {
             padding: 40px 0;
-            p:first-child{
+            p:first-child {
               margin-bottom: 16px;
             }
           }
@@ -265,8 +263,45 @@ section {
       padding: 90px 150px;
       ul {
         @include flex-center-between;
+        li.animation {
+          opacity: 0;
+          transform: translateX(-80px);
+        }
+        &.active {
+          li.animation {
+            animation: fadeIn 1s 1 ease-in-out forwards;
+            &:nth-child(1) {
+              animation-delay: 0.2s;
+            }
+            &:nth-child(2) {
+              animation-delay: 0.4s;
+            }
+            &:nth-child(3) {
+              animation-delay: 0.6s;
+            }
+            &:nth-child(4) {
+              animation-delay: 0.8s;
+            }
+            &:nth-child(5) {
+              animation-delay: 1s;
+            }
+          }
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateX(-80px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
         li {
           @include flex-column-center;
+
           .icon {
             width: 80px;
             height: 80px;
@@ -706,6 +741,20 @@ section {
       .contents {
         ul {
           @include flex-column-center;
+          li.animation {
+            opacity: 0;
+            transform: translateY(-30px);
+          }
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+              transform: translateY(-30px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
           li {
             .also {
               transform: rotate(90deg);
