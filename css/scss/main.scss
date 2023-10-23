@@ -597,7 +597,7 @@ section {
       text-align: center;
     }
     .btn_area {
-      @include flex-j-a-center();
+      @include flex-j-a-center;
       flex-direction: column;
       button {
         width: 280px;
